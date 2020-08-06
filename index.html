@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roulette Virtuel</title>
-    <link rel="stylesheet" href="./css/Style.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
      <!-- ----------------------------  Navigation ---------------------------------------------- -->
@@ -24,43 +24,46 @@
     <div>
     
        <h2>Choisir un Numéro :
-            <select name="select" id="select">          <!--la selection des numeros 1 à 36 pair et impair-->
-                <option value="impair">1</option>
-                <option value="pair">2</option>
-                <option value="impair">3</option>
-                <option value="pair">4</option>
-                <option value="impair">5</option>
-                <option value="pair">6</option>
-                <option value="impair">7</option>
-                <option value="pair">8</option>
-                <option value="impair">9</option>
-                <option value="pair">10</option>
-                <option value="impair">11</option>
-                <option value="pair">12</option>
-                <option value="impair">13</option>
-                <option value="pair">14</option>
-                <option value="impair">15</option>
-                <option value="pair">16</option>
-                <option value="impair">17</option>
-                <option value="pair">18</option>
-                <option value="impair">19</option>
-                <option value="pair">20</option>
-                <option value="impair">21</option>
-                <option value="pair">22</option>
-                <option value="impair">23</option>
-                <option value="pair">24</option>
-                <option value="impair">25</option>
-                <option value="pair">26</option>
-                <option value="impair">27</option>
-                <option value="pair">28</option>
-                <option value="impair">29</option>
-                <option value="pair">30</option>
-                <option value="impair">31</option>
-                <option value="pair">32</option>
-                <option value="impair">33</option>
-                <option value="pair">34</option>
-                <option value="impair">35</option>
-                <option value="pair">36</option>
+            <select name="select" id="select"> <!--la selection des numeros 1 à 36 pair et impair-->
+                <option></option>
+                <option value="pair">pair</option>
+                <option value="impair">impair</option>
+                <option >1</option>
+                <option >2</option>
+                <option >3</option>
+                <option >4</option>
+                <option >5</option>
+                <option >6</option>
+                <option >7</option>
+                <option >8</option>
+                <option >9</option>
+                <option >10</option>
+                <option >11</option>
+                <option >12</option>
+                <option >13</option>
+                <option >14</option>
+                <option >15</option>
+                <option >16</option>
+                <option >17</option>
+                <option >18</option>
+                <option >19</option>
+                <option >20</option>
+                <option >21</option>
+                <option >22</option>
+                <option >23</option>
+                <option >24</option>
+                <option >25</option>
+                <option >26</option>
+                <option >27</option>
+                <option >28</option>
+                <option >29</option>
+                <option >30</option>
+                <option >31</option>
+                <option >32</option>
+                <option >33</option>
+                <option >34</option>
+                <option >35</option>
+                <option >36</option>
             </select>
         </h2>
       <h2>Mise :
@@ -89,7 +92,7 @@
       
         mise = parseInt(nbr.value);
         if (mise > 0) {
-            nombreAleatoire = Math.floor(Math.random() * Math.floor(11));
+            nombreAleatoire = Math.floor(Math.random() * Math.floor(37));
             if (nombreAleatoire === 0) 
             {
                 montantJoueur = montantJoueur - mise;
