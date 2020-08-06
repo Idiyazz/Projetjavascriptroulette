@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en,fr,pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roulette Virtuel</title>
+    <link rel="stylesheet" href="./css/Style.css">
+</head>
+<body>
+     <!-- ----------------------------  Navigation ---------------------------------------------- -->
+
+     <nav class="nav">
+        <div class="nav-menu">
+            <div class="nav-brand">
+                <a href="index.html" class="text-gray"> Jeu de la Roulette </a> 
+               
+            </div>
+    </nav>
+
+    <!-- ------------x---------------  Navigation --------------------------x------------------- -->
+    <div class="site-title">
+<main>
+        <center><h1>Roulette</h1></center>
+    <div>
+    
+       <h2>Choisir un Numéro :
+            <select name="select" id="select">          <!--la selection des numeros 1 à 36 pair et impair-->
+                <option value="impair">1</option>
+                <option value="pair">2</option>
+                <option value="impair">3</option>
+                <option value="pair">4</option>
+                <option value="impair">5</option>
+                <option value="pair">6</option>
+                <option value="impair">7</option>
+                <option value="pair">8</option>
+                <option value="impair">9</option>
+                <option value="pair">10</option>
+                <option value="impair">11</option>
+                <option value="pair">12</option>
+                <option value="impair">13</option>
+                <option value="pair">14</option>
+                <option value="impair">15</option>
+                <option value="pair">16</option>
+                <option value="impair">17</option>
+                <option value="pair">18</option>
+                <option value="impair">19</option>
+                <option value="pair">20</option>
+                <option value="impair">21</option>
+                <option value="pair">22</option>
+                <option value="impair">23</option>
+                <option value="pair">24</option>
+                <option value="impair">25</option>
+                <option value="pair">26</option>
+                <option value="impair">27</option>
+                <option value="pair">28</option>
+                <option value="impair">29</option>
+                <option value="pair">30</option>
+                <option value="impair">31</option>
+                <option value="pair">32</option>
+                <option value="impair">33</option>
+                <option value="pair">34</option>
+                <option value="impair">35</option>
+                <option value="pair">36</option>
+            </select>
+        </h2>
+      <h2>Mise :
+                <input class="btn" type="number" name="" id="nbr" placeholder="Mettez Votre Mise" style="background-color:#104f55; border-radius:1rem;">
+                <button class="btn" onclick="jeu();"> Go </button>
+                <div id="message"></div>
+                    <div class="montant">
+                    <div>Joueur à : <span class="largent"> 100.000 Fcfa</span>
+                    </div>
+                    <div>Casino à : <span class="largent">  0 Fcfa</span>
+                    </div>
+    </h2>
+                </div>
+</main>
+    </div>
+<script>
+    let montantJoueur = 100, montantOrdinateur = 0, mise, gain, nombreAleatoire;// le valeur de la jouer au depart c'est 100 et pour casino c'est 0
+
+    function jeu() 
+    {
+        const numero = document.getElementById('numero');
+        const select = document.getElementById('select');
+        const nbr = document.getElementById('nbr');
+        const message = document.getElementById('msg');
+        const largent = document.getElementsByClassName('largent');
+      
+        mise = parseInt(nbr.value);
+        if (mise > 0) {
+            nombreAleatoire = Math.floor(Math.random() * Math.floor(11));
+            if (nombreAleatoire === 0) 
+            {
+                montantJoueur = montantJoueur - mise;
+                montantOrdinateur = montantOrdinateur  + mise
+                message.textContent = nombreAleatoire + " Perdu "
+            }
+            else 
+            if (nombreAleatoire == select[select.selectedIndex].text) 
+            {
+                gain = mise * 36;
+                montantJoueur = montantJoueur + gain
+                message.textContent = nombreAleatoire + " Gagné "
+            } 
+            else 
+            if (nombreAleatoire % 2 === 0 && select.value === 'pair') 
+            {
+                gain = mise * 2;
+                montantJoueur += gain
+                message.textContent = nombreAleatoire + " Gagné "
+            } 
+            else 
+            if (nombreAleatoire % 2 != 0 && select.value === 'impair') 
+            {
+                gain = mise * 2;
+                montantJoueur += gain
+                message.textContent = nombreAleatoire + " Gagné "
+            } 
+            else 
+            {
+                montantJoueur -= mise;
+                montantOrdinateur += mise;
+                message.textContent = nombreAleatoire + " Perdu "
+            }
+            largent[0].textContent = montantJoueur + " Mille FCFA"
+            if (montantOrdinateur != 0) largent[1].textContent = montantOrdinateur + " Mille FCFA"
+        }
+        if (mise === "perdu"){
+            
+        }
+    }
+</script>
+</body>
+</html>
