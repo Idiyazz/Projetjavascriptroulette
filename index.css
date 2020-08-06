@@ -40,11 +40,11 @@ body{
 }
 
 .nav a{
-    font-size: 1.9rem;
+    font-size: 1.4rem;
     padding: 1rem 0;
     display: block;
     font-family: var(--Lexend);
-    font-size: 1.6rem;
+    font-size: 1.5rem;
 }
 
 .nav a:hover{
@@ -83,7 +83,7 @@ a{
 }
 h1{
     font-family: var(--Lexend);
-    font-size: 2.5rem;
+    font-size: 1.5rem;
 }
 .btn{
     border: none;
