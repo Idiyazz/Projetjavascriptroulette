@@ -1,4 +1,4 @@
-@import url('fonts.css');
+/*@import url('fonts.css');*/
 
 body{
     
@@ -43,7 +43,6 @@ body{
     font-size: 1.4rem;
     padding: 1rem 0;
     display: block;
-    font-family: var(--Lexend);
     font-size: 1.5rem;
 }
 
@@ -82,7 +81,7 @@ a{
     color: var(--text-gray);
 }
 h1{
-    font-family: var(--Lexend);
+    
     font-size: 1.5rem;
 }
 .btn{
@@ -90,7 +89,7 @@ h1{
     border-radius: 2rem;
     padding: 1rem 3rem;
     font-size: 1rem;
-    font-family: var(--Livvic);
+    
     cursor: pointer;
     background-color: var(--midnight);
     color: var(--white);
@@ -100,7 +99,7 @@ select{
     border-radius: 1rem;
     padding: 1rem 1rem;
     font-size: 1rem;
-    font-family: var(--Livvic);
+   
     cursor: pointer;
     background-color: var(--midnight);
     color: var(--white);
